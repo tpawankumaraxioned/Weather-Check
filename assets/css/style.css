@@ -164,6 +164,7 @@ sub { bottom: -.25em; }
 
 .wrapper {
   width: 79%;
+  max-width: 1600;
   margin: 0 auto;
 }
 
@@ -291,6 +292,49 @@ h1 { display: flex; }
 
 /* 4.3. List
    ========================================================================== */
+
+.list {
+  padding: 4.6% 0;
+  background: #262936;
+}
+
+.list ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list ul li {
+  display: flex;
+  flex-basis: 31%;
+  justify-content: space-between;
+}
+
+.list ul span {
+  font-size: 26px;
+  color: #0196D2;
+}
+
+.list article { flex-basis: 72.5%; }
+
+.list article h3 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.list article p {
+  color: #A4A6AE;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.list article a {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+
 /* 4.4. Features
    ========================================================================== */
 
