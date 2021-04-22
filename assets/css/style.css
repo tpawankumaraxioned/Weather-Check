@@ -352,9 +352,64 @@ h1 { display: flex; }
 }
 
 .features h4 {
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   color: #fff;
-  font-size: 30px;
+  font-size: 38px;
+}
+
+.app-feature ul li {
+  margin-left: 31px;
+  
+}
+
+.app-feature ul li h5 {
+  margin-bottom: 20px;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app-feature ul li h5::before {
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  content: '';
+  transform: translateY(-50%);
+  background: url(../images/arrow.png) no-repeat;
+}
+
+.app-feature li p {
+  margin-bottom: 15px;
+  color: #A2A4AB;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.analyssis ul li {
+  border-bottom: 1px solid #3c3c3c;
+  padding: 13px 0;
+  position: relative;
+  color: #C7C7CA;
+  text-indent: 20px;
+  font-size: 14px;
+}
+
+.analyssis ul li:last-child { border-bottom: none; }
+
+.analyssis ul li::before {
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+  transform: translateY(-50%);
+  background: url(../images/arrow.png) no-repeat;
 }
 
 /* ==========================================================================
