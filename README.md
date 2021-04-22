@@ -1,3 +1,3 @@
-Wheather Check Template
+Weather Check Template
 ===================
 
