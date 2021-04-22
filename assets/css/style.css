@@ -72,6 +72,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: Roboto, sans-serif;
   vertical-align: baseline;
 }
 
@@ -149,7 +150,7 @@ sub { bottom: -.25em; }
  * of creating an extra class for it) */
 
 .futura-bold-font {
-  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Roboto', 'sans-serif', 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica;
   font-style: normal;
   font-weight: bold;
 }
@@ -160,8 +161,67 @@ sub { bottom: -.25em; }
 
 /* 3.1. Logo/Navigation
    ========================================================================== */
- 
-    
+
+.wrapper {
+  width: 79%;
+  margin: 0 auto;
+}
+
+ul { list-style: none; }   
+header { background: #1E202B; }
+a { text-decoration: none;}
+
+header .wrapper {
+  padding: 3.6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 { display: flex; }
+
+.company-quote {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.companyname {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tagline {
+  color: #A4A6AE;
+  font-size: 10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 21px;
+  display: inline-flex;
+}
+
+.menu li a {
+  padding: 6px 25px;
+  color: #F4F4F5;
+  font-size: 14px;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  border: 2px solid #0196D2;
+  padding: 4px 23px;
+  border-radius: 25px;
+  color: #0196D2;
+}
+
+.hamburger { display: none;}
 
 /* ==========================================================================
    4. Content 
