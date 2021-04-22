@@ -229,8 +229,66 @@ h1 { display: flex; }
 
 /* 4.1. Banner
    ========================================================================== */
+  
+.banner {
+  background: url('../images/banner.png') no-repeat center center / cover;
+}
+
+
 /* 4.2. Live cameras
    ========================================================================== */
+
+.live-cameras { 
+  padding: 7% 0;
+  background: #1E202B; 
+}
+
+.live-cameras h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #FEFEFE;
+}
+
+.live-cameras ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.live-cameras ul li {
+  display: flex;
+  flex-basis: 23%;
+  flex-direction: column;
+}
+
+.live-cameras ul li a { 
+  margin-bottom: 25px;
+  position: relative; 
+}
+
+.live-cameras ul img:first-child {
+  border-radius:5px;
+  width: 100%;
+}
+
+.live-cameras ul img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.live-cameras ul .local-city {
+  margin-bottom: 10px;
+  color: #CECFD1;
+  font-size: 16px;
+}
+
+.live-cameras ul .lacal-date {
+  color: #A4A6AE;
+  font-size: 10px;
+}
+
+
 /* 4.3. List
    ========================================================================== */
 /* 4.4. Features
