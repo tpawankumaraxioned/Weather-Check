@@ -342,12 +342,12 @@ h1 { display: flex; }
   background: #1E202B;
 }
 
-.features .wrapper > ul {
+.features-list {
   display: flex;
   justify-content: space-between;
 }
 
-.features .wrapper > ul li {
+.features-list li {
   flex-basis: 31.5%;
 }
 
@@ -410,6 +410,19 @@ h1 { display: flex; }
   content: '';
   transform: translateY(-50%);
   background: url(../images/arrow.png) no-repeat;
+}
+
+.awesome-pic ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.awesome-pic ul li {flex-basis: 31.5%; }
+
+.awesome-pic ul li img {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* ==========================================================================
