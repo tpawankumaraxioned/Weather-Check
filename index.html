@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>Wheather Check</title>
     <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
-    <meta name="description" lang="en" content="Wheather Check">
+    <meta name="description" lang="en" content="Weather Check">
     <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
-    <meta name="keywords" lang="en" content="Wheather Check, Wheather forecast">
+    <meta name="keywords" lang="en" content="Weather Check, Weather forecast">
     <!-- View-port Basics: http://mzl.la/VYREaP -->
     <!-- This meta tag is used for mobile device to display the page without any zooming,
         so how much the device is able to fit on the screen is what's shown initially. 
@@ -29,21 +29,232 @@
     <div class="container">
       <!--header starts here-->
       <header>
-        
+        <div class="wrapper">
+          <h1><a href="index.html" title="logo">
+            <img src="./assets/images/logo.png" alt="Logo_Image">
+            <div class="company-quote">
+              <span class="companyname">Company name</span>
+              <span class="tagline">tagline goes here</span>
+            </div>
+          </a></h1>
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html" title="home">Home</a></li>
+              <li><a href="#FIXME" title="news">News</a></li>
+              <li><a href="#liveCam" title="live_cameras">Live cameras</a></li>
+              <li><a href="photos.html" title="photos">Photos</a></li>
+              <li><a href="#FIXME" title="contact">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="#FIXME" title="hamburger-menu" class="hamburger" id="hamburger-icon">
+            <span class="short-menu"></span>
+          </a>
+        </div>
       </header>
       <!--header ends here-->
       <!--main starts here-->
       <main>
-
+        <!-- banner starts here -->
+        <div class="banner">
+          <div class="wrapper">
+            <!-- location search starts here -->
+            <form action="#FIXME" class="searchForm" method="GET">
+              <div class="search">
+                <input type="text" name="search" class="search-location" placeholder="Find your location...">
+                <button class="findBtn">Find</button>
+              </div>
+            </form>
+            <!-- location search ends here -->
+            <!-- weather forecast starts here -->
+            <div class="current-weather">
+              <ul class="weather-date">
+                <li class="current-day">Monday</li>
+                <li class="current-date">6 Oct</li>
+              </ul>
+              <span class="city-name">New York</span>
+              <ul class="weather-temp">
+                <li class="temp">23 C</li>
+                <li class="weather-img"><img src="./assets/images/icons/icon-1.svg" alt="weather-image"></li>
+              </ul>
+              <ul class="weather-type">
+                <li class="humidity-icon" id="humidity">20%</li>
+                <li class="wind-icon" id="wind-speed">18m/sec</li>
+                <li class="compass-icon" id="compass">East</li>
+              </ul>
+            </div>
+            <!-- weather forecast ends here -->
+          </div>
+        </div>
+        <!-- banner ends here -->
+        <!-- live cameras section starts here -->
+        <section class="live-cameras" id="liveCam">
+          <div class="wrapper">
+            <h2>Live cameras</h2>
+            <ul>
+              <li>
+                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-1@2x.jpg">
+                  <img src="./assets/images/live-camera-1.jpg" alt="live-camera-1-image">
+                  <img src="./assets/images/play-button.png" alt="play-button">
+                </a>
+                <span>New York</span>
+                <span>8 oct, 8:00AM</span>
+              </li>
+              <li>
+                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-2@2x.jpg">
+                  <img src="./assets/images/live-camera-2.jpg" alt="live-camera-2-image">
+                  <img src="./assets/images/play-button.png" alt="play-button">
+                </a>
+                <span>Los Angeles</span>
+                <span>8 oct, 8:00AM</span>
+              </li>
+              <li>
+                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-3@2x.jpg">
+                  <img src="./assets/images/live-camera-3.jpg" alt="live-camera-3-image">
+                  <img src="./assets/images/play-button.png" alt="play-button">
+                </a>
+                <span>Chicago</span>
+                <span>8 oct, 8:00AM</span>
+              </li>
+              <li>
+                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-4@2x.jpg">
+                  <img src="./assets/images/live-camera-4.jpg" alt="live-camera-4-image">
+                  <img src="./assets/images/play-button.png" alt="play-button">
+                </a>
+                <span>London</span>
+                <span>8 oct, 8:00AM</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- live cameras section ends here -->
+        <!-- list starts here -->
+        <div class="list">
+          <div class="wrapper">
+            <ul>
+              <li>
+                <span>06.10</span>
+                <article>
+                  <h3>Doloremque laudantium totam sequi</h3>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis consectetur similique a accusantium 
+                    velit cumque ducimus recusandae voluptatem, at fugiat quibusdam dolor dolore. Aliquam eius, consequatur 
+                    tempore molestiae fugiat optio?
+                  </p>
+                  <a href="#FIXME" title="read more"><img src="./assets/images/arrow.png" alt="arrow-image"></a>
+                </article>
+              </li>
+              <li>
+                <span>06.10</span>
+                <article>
+                  <h3>Doloremque laudantium totam sequi</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor consequuntur numquam delectus 
+                    velit voluptas nihil officiis eveniet ratione, tempore odit corporis culpa ex, error officia modi dolorum.
+                  </p>
+                  <a href="#FIXME" title="read more"><img src="./assets/images/arrow.png" alt="arrow-image"></a>
+                </article>
+              </li>
+              <li>
+                <span>06.10</span>
+                <article>
+                  <h3>Doloremque laudantium totam sequi</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor consequuntur numquam delectus 
+                    velit voluptas nihil officiis eveniet ratione, tempore odit corporis culpa ex, error officia modi dolorum.
+                  </p>
+                  <a href="#FIXME" title="read more"><img src="./assets/images/arrow.png" alt="arrow-image"></a>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- list ends here -->
+        <!-- features starts here -->
+        <div class="features">
+          <div class="wrapper">
+            <!-- app-feature starts here -->
+            <secton class="app-feature">
+              <h4>Application features</h4>
+              <ul>
+                <li>
+                  <h5>Natus error sit voluptatem accusantium</h5>
+                  <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                </li>
+                <li>
+                  <h5>Natus error sit voluptatem accusantium</h5>
+                  <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                </li>
+                <li>
+                  <h5>Natus error sit voluptatem accusantium</h5>
+                  <p>Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                </li>
+              </ul>
+            </secton>
+            <!-- app-feature ends here -->
+            <!-- weather-analysis starts here -->
+            <section class="analyssis">
+              <h5>Weather analyssis</h5>
+              <ul>
+                <li>Accusantium doloremque laudantium rem aperiam</li>
+                <li>Eaque ipsa quae ab illo inventore veritatis quasi</li>
+                <li>Architecto beatae vitar dicta sunt explicabo</li>
+                <li>Nemo enim ipsam voluptatem quia voluptas</li>
+                <li>Aspernatur aut odit aut fugit, sed quia consequuntur</li>
+                <li>Magni dolores eos qui ratione voluptatem sequi</li>
+                <li>Neque porro quisquam est qui dolorem ipsum quia</li>
+              </ul>
+            </section>
+            <!-- weather-analysis ends here -->
+            <!-- awesome-pic starts here -->
+            <section class="awesome-pic">
+              <h5>Awesome Photos</h5>
+              <ul>
+                <li><img src="./assets/images/thumb-1.jpg" alt="Photos-1"></li>
+                <li><img src="./assets/images/thumb-2.jpg" alt="Photo-2"></li>
+                <li><img src="./assets/images/thumb-3.jpg" alt="Photo-3"></li>
+                <li><img src="./assets/images/thumb-4.jpg" alt="Photo-4"></li>
+                <li><img src="./assets/images/thumb-5.jpg" alt="Photo-5"></li>
+                <li><img src="./assets/images/thumb-6.jpg" alt="Photo-6"></li>
+                <li><img src="./assets/images/thumb-7.jpg" alt="Photo-7"></li>
+                <li><img src="./assets/images/thumb-8.jpg" alt="Photo-8"></li>
+                <li><img src="./assets/images/thumb-9.jpg" alt="Photo-9"></li>
+              </ul>
+            </section>
+            <!-- awesome-pic ends here -->
+          </div>
+        </div>
+        <!-- features ends here -->
       </main>
       <!--main ends here-->
-
       <!--footer starts here-->
-      <footer>      
-
+      <footer> 
+        <!-- footer-top starts here -->
+        <div class="footer-top">
+          <div class="wrapper">
+            <form action="#FIXME" class="emailForm" method="GET">
+              <div class="email">
+                <input type="text" name="email" id="emailid" placeholder="Enter your email to subscribe...">
+              </div>
+              <button id="subscribe">Subscribe</button>
+            </form>
+            <ul class="footer-social-icon">
+              <li><a href="https://www.facebook.com/" target="_blank" title="Facebook" class="facebook"><span>Facebook</span></a></li>
+              <li><a href="https://twitter.com/?lang=en" target="_blank" title="Twitter" class="twitter"><span>Twitter</span></a></li>
+              <li><a href="http://www.google.com/" target="_blank" title="Google Plus" class="google"><span>Google Plus</span></a></li>
+              <li><a href="https://in.pinterest.com/" target="_blank" title="Pinterest" class="pinterest"><span>Pinterest</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- footer-top ends here -->
+        <!-- footer-bottom starts here -->
+        <div class="footer-bottom">
+          <div class="wrapper">
+            <span>Copyright 2014 Company name.Designed by Themezy. All rights reserved</span>
+          </div>
+        </div>
+        <!-- footer-bottom ends here -->
       </footer>
       <!--footer ends here-->
-
     </div>
     <!--container ends here-->
     <script src="assets/vendor/jquery-1.8.3.min.js"></script>
