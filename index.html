@@ -60,26 +60,32 @@
             <form action="#FIXME" class="searchForm" method="GET">
               <div class="search">
                 <input type="text" name="search" id="city-in" class="search-location" placeholder="Find your location...">
-                <button class="findBtn">Find</button>
               </div>
+              <button class="findBtn" id="findLoc">Find</button>
             </form>
             <!-- location search ends here -->
             <!-- weather forecast starts here -->
             <div class="current-weather">
-              <ul class="weather-date">
-                <li id="current-day">Monday</li>
-                <li id="current-date">6 Oct</li>
-              </ul>
-              <span class="city-name">New York</span>
-              <ul class="weather-temp">
-                <li class="temp" id="tem">23 C</li>
-                <li id="weather-img"><img src="./assets/images/icons/icon-1.svg" id="weather-icon-img" alt="weather-image"></li>
-              </ul>
-              <ul class="weather-type">
-                <li class="humidity-icon" id="humidity">20%</li>
-                <li class="wind-icon" id="wind-speed">18m/sec</li>
-                <li class="compass-icon" id="compass">East</li>
-              </ul>
+              <div class="weather-data">
+                <ul class="weather-date">
+                  <li id="current-day"></li>
+                  <li id="current-date"></li>
+                </ul>
+                <span class="city-name" id="city-loc"></span>
+                <ul class="weather-temp">
+                  <li class="temp" id="tem"></li>
+                  <li class="weather-img"><img src="./assets/images/icons/icon-1.svg" id="weather-icon-img" alt="weather-image"></li>
+                </ul>
+                <ul class="weather-type">
+                  <li class="humidity-icon" id="humidity"></li>
+                  <li class="wind-icon" id="wind-speed"></li>
+                  <li class="compass-icon" id="compass"></li>
+                </ul>
+              </div>
+              <div id="errorMsg">
+                <h2>Sorry...!!!!</h2>
+                <p>CIty Name Not Found</p>
+              </div>
             </div>
             <!-- weather forecast ends here -->
           </div>
