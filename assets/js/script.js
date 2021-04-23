@@ -8,7 +8,7 @@ todays_date = today.getDate();
 months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 cur_month = months[today.getMonth()];
 
-var city_location, current_temp, weather_icon, weather_humidity, wind_speed, wind_deg;
+var city_name,city_location, current_temp, weather_icon, weather_humidity, wind_speed, wind_deg;
 
 document.getElementById('current-day').innerHTML = week_day;
 document.getElementById('current-date').innerHTML = todays_date+' '+cur_month;
@@ -18,40 +18,42 @@ weather_icon = document.getElementById('weather-icon-img');
 weather_humidity = document.getElementById('humidity');
 wind_speed =  document.getElementById('wind-speed');
 wind_deg =  document.getElementById('compass');
-var city_name = 'Mumbai';
+city_name = 'Mumbai';
+
 function get_data(city_name) {
-  
-  city_location.innerHTML = city_name;
   var data_file = 'https://api.openweathermap.org/data/2.5/weather?q='+ city_name +'&units=metric&appid=fcdf0a2960c73aa346b28c532167c49c',
-      http_request = new XMLHttpRequest();
+  http_request = new XMLHttpRequest();
+  http_request.open("GET", data_file ,true);
+  http_request.send();
   http_request.onreadystatechange = function() {
     var data;
     if (this.readyState == 4 ) {
       if(this.status == 200) {
+        document.querySelector('.weather-data').style.display = "block";
+        document.querySelector('#errorMsg').style.display = "none";
         data = JSON.parse(this.response);
+        city_location.innerHTML = city_name;
         displayData(data);
       }
       else{
-        console.log('Something went wrong');
+        document.querySelector('.weather-data').style.display = "none";
+        document.querySelector('#errorMsg').style.display = "block";
       }
     }
-  };
-  http_request.open("GET", data_file ,true);
-  http_request.send();
+  }
 }
 
 get_data(city_name); 
 
-
+// OnClick search function starts here
 var findBtn = document.querySelector('.findBtn');
 
 findBtn.addEventListener('click', function(ev) {
   ev.preventDefault();
   var find_location = document.getElementById('city-in').value;
-console.log(find_location);
   get_data(find_location);
-  
 });
+// OnClick search function ends here
 
 function displayData(data) {
 
@@ -59,8 +61,7 @@ function displayData(data) {
   weather_humidity.innerHTML = data.main.humidity+ '%';
   wind_speed.innerHTML = data.wind.speed+'m/sec';
   wind_deg.innerHTML = data.wind.deg;
-  
-  console.log('weather icon '+weather_icon);  
+    
   if(data.weather[0].main == 'Drizzle') {
     weather_icon.src = 'assets/images/icons/icon-13.svg';
   }
@@ -82,9 +83,7 @@ function displayData(data) {
   else {
     weather_icon.src = 'assets/images/icons/icon-1.svg';
   }
-  console.log(weather_icon);
 }
-
 //Weather api function ends here
 
 
