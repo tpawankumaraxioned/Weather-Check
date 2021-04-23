@@ -164,7 +164,7 @@ sub { bottom: -.25em; }
 
 .wrapper {
   width: 79%;
-  max-width: 1600;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
