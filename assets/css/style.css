@@ -232,15 +232,142 @@ h1 { display: flex; }
    ========================================================================== */
   
 .banner {
-  background: url('../images/banner.png') no-repeat center center / cover;
+  padding: 5% 0 15% 0;
+  position: relative;
+  background: url(../images/banner.png) no-repeat;
+  /* background-repeat: no-repeat; */
+  background-size: 100% 100%;
+  text-align: center;
 }
 
+/* form.searchForm { padding: 5% 0 13% 0; } */
+.search { position: relative; }
+
+.search-location {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 20px;
+  border-style: none;
+  border-radius: 50px;
+  /* position: relative; */
+  background-color: #1E202B;
+  color: #A4A6AE;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-location::placeholder {
+  color: #A4A6AE;
+  opacity: 1;
+}
+
+.findBtn {
+  box-sizing: border-box;
+  padding: 17px 45px;
+  border-style: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  background: #009AD8;
+  color: #fff;
+  font-size: 14px;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.findBtn:hover {
+  background: #323544;
+  color: #fff;
+}
+
+.current-weather {
+  box-sizing: border-box;
+  width: 40%;
+  /* padding: 30px; */
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #323544;
+  color: #BFC1C8;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+}
+
+.weather-date {
+  display: flex;
+  padding: 10px;
+  background: #2D303D;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.city-name {
+  display: block;
+  margin: 40px 20px 20px 20px;
+  text-align: left;
+  font-size: 17px;
+}
+
+.weather-temp {
+  margin-left: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.weather-temp .temp {
+  font-size: 84px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.weather-temp .weather-img {
+  flex-basis: 25%;
+  margin-top: 15px;
+}
+
+.weather-img img { width: 60%; }
+
+.weather-type {
+  display: flex;
+  margin: 15px 20px 25px 25px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.weather-type li {
+  margin: 0 18px 0 26px;
+  position: relative;
+  color: #87888E;
+  font-size: 15px;
+}
+
+.weather-type li::before {
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -26px;
+  content: '';
+}
+
+.weather-type li:nth-child(1)::before {  background: url(../images/icon-umberella.png) no-repeat; }
+
+.weather-type li:nth-child(2)::before {
+  width: 24px;
+  background: url(../images/icon-wind.png) no-repeat;
+}
+
+.weather-type li:nth-child(3)::before { background: url(../images/icon-compass.png) no-repeat; }
 
 /* 4.2. Live cameras
    ========================================================================== */
 
 .live-cameras { 
-  padding: 7% 0;
+  padding: 18% 0 7% 0;
   background: #1E202B; 
 }
 
