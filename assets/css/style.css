@@ -558,5 +558,103 @@ h1 { display: flex; }
 
 /* 5.1. Footer-top
    ========================================================================== */
+
+footer {
+  background: #262936;
+  padding: 4% 0 5% 0;
+}
+
+.footer-top { margin-bottom: 15px; }
+
+.footer-top .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.emailForm {
+  margin-bottom: 16px;
+  position: relative;
+  flex-basis: 66%;
+}
+
+.emailForm .email input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 20px;
+  border-style: none;
+  border-radius: 50px;
+  background-color: #1E202B;
+  color: #787b7e;
+  font-size: 13px;
+  outline: none;
+}
+
+.email input::placeholder {
+  color: #787b7e;
+  opacity: 1;
+}
+
+.emailForm button {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border-style: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  background: #009AD8;
+  color: #fff;
+  font-size: 14px;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.emailForm button:hover {
+  background: #323544;
+  color: #fff;
+}
+
+.footer-social-icon {
+  margin-right: 8%;
+  display: flex; 
+}
+
+.footer-social-icon li { margin: 0 3px; }
+
+.footer-social-icon a span {
+  text-indent: -99999999px;
+  display: inline-block;
+}
+
+.footer-social-icon a { display: inline-block; }
+
+.footer-social-icon a::before {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  display: inline-block;
+  color: #009AD8;
+  border-radius: 50px;
+  background: #1E202B;
+  font: normal normal normal 18px/1 FontAwesome;
+  text-align: center;
+}
+
+.footer-social-icon a:hover::before {
+  background: #009AD8;
+  color: #1E202B;
+}
+
+.footer-social-icon .facebook::before { content: '\f09a'; }
+.footer-social-icon .twitter::before { content: '\f099'; }
+.footer-social-icon .google::before { content: '\f0d5'; }
+.footer-social-icon .pinterest::before { content: '\f0d2'; }
+
 /* 5.2. Footer-bottom
    ========================================================================== */
+
+.footer-bottom span {
+  font-size: 14px;
+  color: #B0B2B9;
+}
