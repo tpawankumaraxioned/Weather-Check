@@ -14,18 +14,16 @@
     1.2. Clear Fix
     1.3. Font class declaration
   2. Body
-  3. Header / .header
-    2.1. Navigation / .navbar
-  4. Content / .content
-    4.1. Left column / .leftcolumn
-    4.2. Right column / .rightcolumn
-    4.3. Sidebar / .sidebar
-      4.3.1. RSS / .rss
-      4.3.2. Search / .search
-      4.3.3. Boxes / .box
-      4.3.4. Sideblog / .sideblog
-      4.3.5. Advertisements / .ads
-  5. Footer / .footer
+  3. Header 
+    3.1. Logo/Navigation
+  4. Content 
+    4.1. Banner
+    4.2. Live cameras
+    4.3. List
+    4.4. Features
+  5. Footer 
+    5.1. Footer-top
+    5.2. Footer-bottom
   ------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -74,6 +72,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: Roboto, sans-serif;
   vertical-align: baseline;
 }
 
@@ -151,7 +150,510 @@ sub { bottom: -.25em; }
  * of creating an extra class for it) */
 
 .futura-bold-font {
-  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Roboto', 'sans-serif', 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica;
   font-style: normal;
   font-weight: bold;
+}
+
+/* ==========================================================================
+   3. Header
+   ========================================================================== */
+
+/* 3.1. Logo/Navigation
+   ========================================================================== */
+
+.wrapper {
+  width: 79%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+ul { list-style: none; }   
+header { background: #1E202B; }
+a { text-decoration: none;}
+
+header .wrapper {
+  padding: 3.6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 { display: flex; }
+
+.company-quote {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.companyname {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tagline {
+  color: #A4A6AE;
+  font-size: 10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 21px;
+  display: inline-flex;
+}
+
+.menu li a {
+  padding: 6px 25px;
+  color: #F4F4F5;
+  font-size: 14px;
+}
+
+.menu li a.active,
+.menu li a:hover {
+  border: 2px solid #0196D2;
+  padding: 4px 23px;
+  border-radius: 25px;
+  color: #0196D2;
+}
+
+.hamburger { display: none;}
+
+/* ==========================================================================
+   4. Content 
+   ========================================================================== */
+
+/* 4.1. Banner
+   ========================================================================== */
+  
+.banner {
+  padding: 5% 0 15% 0;
+  position: relative;
+  background: url(../images/banner.png) no-repeat;
+  /* background-repeat: no-repeat; */
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+/* form.searchForm { padding: 5% 0 13% 0; } */
+.search { position: relative; }
+
+.search-location {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 20px;
+  border-style: none;
+  border-radius: 50px;
+  /* position: relative; */
+  background-color: #1E202B;
+  color: #A4A6AE;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-location::placeholder {
+  color: #A4A6AE;
+  opacity: 1;
+}
+
+.findBtn {
+  box-sizing: border-box;
+  padding: 17px 45px;
+  border-style: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  background: #009AD8;
+  color: #fff;
+  font-size: 14px;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.findBtn:hover {
+  background: #323544;
+  color: #fff;
+}
+
+.current-weather {
+  box-sizing: border-box;
+  width: 39.5%;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #323544;
+  color: #BFC1C8;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+}
+
+.weather-date {
+  display: flex;
+  padding: 10px 15px;
+  background: #2D303D;
+  font-size: 14px;
+  justify-content: space-between;
+}
+
+.city-name {
+  display: block;
+  margin: 40px 20px 20px 20px;
+  text-align: left;
+  font-size: 17px;
+}
+
+.weather-temp {
+  margin-left: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.weather-temp .temp {
+  font-size: 86px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.weather-temp .weather-img {
+  flex-basis: 25%;
+  margin-top: 15px;
+}
+
+.weather-img img { width: 60%; }
+
+.weather-type {
+  display: flex;
+  margin: 20px 20px 35px 25px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.weather-type li {
+  margin: 0 18px 0 26px;
+  position: relative;
+  color: #8C8D92;
+  font-size: 15px;
+}
+
+.weather-type li::before {
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -26px;
+  content: '';
+}
+
+.weather-type li:nth-child(1)::before {  background: url(../images/icon-umberella.png) no-repeat; }
+
+.weather-type li:nth-child(2)::before {
+  width: 24px;
+  background: url(../images/icon-wind.png) no-repeat;
+}
+
+.weather-type li:nth-child(3)::before { background: url(../images/icon-compass.png) no-repeat; }
+
+/* 4.2. Live cameras
+   ========================================================================== */
+
+.live-cameras { 
+  padding: 18% 0 7% 0;
+  background: #1E202B; 
+}
+
+.live-cameras h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #FEFEFE;
+}
+
+.live-cameras ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.live-cameras ul li {
+  display: flex;
+  flex-basis: 23%;
+  flex-direction: column;
+}
+
+.live-cameras ul li a { 
+  margin-bottom: 25px;
+  position: relative; 
+}
+
+.live-cameras ul img:first-child {
+  border-radius:5px;
+  width: 100%;
+}
+
+.live-cameras ul img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.live-cameras ul .local-city {
+  margin-bottom: 10px;
+  color: #CECFD1;
+  font-size: 16px;
+}
+
+.live-cameras ul .lacal-date {
+  color: #A4A6AE;
+  font-size: 10px;
+}
+
+
+/* 4.3. List
+   ========================================================================== */
+
+.list {
+  padding: 4.6% 0;
+  background: #262936;
+}
+
+.list ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list ul li {
+  display: flex;
+  flex-basis: 31%;
+  justify-content: space-between;
+}
+
+.list ul span {
+  font-size: 26px;
+  color: #0196D2;
+}
+
+.list article { flex-basis: 72.5%; }
+
+.list article h3 {
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.list article p {
+  color: #A4A6AE;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.list article a {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* 4.4. Features
+   ========================================================================== */
+
+.features {
+  padding: 5.5% 0;
+  background: #1E202B;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-list li {
+  flex-basis: 31.5%;
+}
+
+.features h4 {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 38px;
+}
+
+.app-feature ul li {
+  margin-left: 31px;
+  
+}
+
+.app-feature ul li h5 {
+  margin-bottom: 20px;
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app-feature ul li h5::before {
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  content: '';
+  transform: translateY(-50%);
+  background: url(../images/arrow.png) no-repeat;
+}
+
+.app-feature li p {
+  margin-bottom: 15px;
+  color: #A2A4AB;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.analyssis ul li {
+  border-bottom: 1px solid #3c3c3c;
+  padding: 13px 0;
+  position: relative;
+  color: #C7C7CA;
+  text-indent: 20px;
+  font-size: 14px;
+}
+
+.analyssis ul li:last-child { border-bottom: none; }
+
+.analyssis ul li::before {
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+  transform: translateY(-50%);
+  background: url(../images/arrow.png) no-repeat;
+}
+
+.awesome-pic ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.awesome-pic ul li {flex-basis: 31.5%; }
+
+.awesome-pic ul li img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   5. Footer 
+   ========================================================================== */
+
+/* 5.1. Footer-top
+   ========================================================================== */
+
+footer {
+  background: #262936;
+  padding: 4% 0 5% 0;
+}
+
+.footer-top { margin-bottom: 15px; }
+
+.footer-top .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.emailForm {
+  margin-bottom: 16px;
+  position: relative;
+  flex-basis: 66%;
+}
+
+.emailForm .email input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 20px;
+  border-style: none;
+  border-radius: 50px;
+  background-color: #1E202B;
+  color: #787b7e;
+  font-size: 13px;
+  outline: none;
+}
+
+.email input::placeholder {
+  color: #787b7e;
+  opacity: 1;
+}
+
+.emailForm button {
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border-style: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  background: #009AD8;
+  color: #fff;
+  font-size: 14px;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.emailForm button:hover {
+  background: #323544;
+  color: #fff;
+}
+
+.footer-social-icon {
+  margin-right: 8%;
+  display: flex; 
+}
+
+.footer-social-icon li { margin: 0 3px; }
+
+.footer-social-icon a span {
+  text-indent: -99999999px;
+  display: inline-block;
+}
+
+.footer-social-icon a { display: inline-block; }
+
+.footer-social-icon a::before {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  display: inline-block;
+  color: #009AD8;
+  border-radius: 50px;
+  background: #1E202B;
+  font: normal normal normal 18px/1 FontAwesome;
+  text-align: center;
+}
+
+.footer-social-icon a:hover::before {
+  background: #009AD8;
+  color: #1E202B;
+}
+
+.footer-social-icon .facebook::before { content: '\f09a'; }
+.footer-social-icon .twitter::before { content: '\f099'; }
+.footer-social-icon .google::before { content: '\f0d5'; }
+.footer-social-icon .pinterest::before { content: '\f0d2'; }
+
+/* 5.2. Footer-bottom
+   ========================================================================== */
+
+.footer-bottom span {
+  font-size: 14px;
+  color: #B0B2B9;
 }
