@@ -241,7 +241,7 @@ h1 { display: flex; }
 }
 
 /* form.searchForm { padding: 5% 0 13% 0; } */
-.search { position: relative; }
+.searchForm { position: relative; }
 
 .search-location {
   box-sizing: border-box;
@@ -249,7 +249,6 @@ h1 { display: flex; }
   padding: 20px 20px;
   border-style: none;
   border-radius: 50px;
-  /* position: relative; */
   background-color: #1E202B;
   color: #A4A6AE;
   font-size: 14px;
@@ -361,6 +360,18 @@ h1 { display: flex; }
 }
 
 .weather-type li:nth-child(3)::before { background: url(../images/icon-compass.png) no-repeat; }
+
+div#errorMsg {  
+  padding: 30px;
+  display: none; 
+}
+
+div#errorMsg h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
 
 /* 4.2. Live cameras
    ========================================================================== */
