@@ -241,6 +241,7 @@ h1 { display: flex; }
 }
 
 /* form.searchForm { padding: 5% 0 13% 0; } */
+
 .searchForm { position: relative; }
 
 .search-location {
