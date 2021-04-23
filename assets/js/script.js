@@ -5,12 +5,19 @@ today = new Date();
 days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 week_day = days[today.getDay()];
 todays_date = today.getDate();
-months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-current_month = months[today.getMonth()];
+months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+cur_month = months[today.getMonth()];
 
-console.log(week_day);
-console.log(todays_date);
-console.log(current_month);
+// console.log(week_day);
+// console.log(todays_date);
+// console.log(current_month);
+
+var city_location, current_temp, weather_icon, weather_humidity, wind_speed, wind_deg;
+
+document.getElementById('current-day').innerHTML = week_day;
+document.getElementById('current-date').innerHTML = todays_date+' '+cur_month;
+// document.getElementById('city-name').innerHTML = 'Mumbai';
+console.log(document.getElementById('city-name').innerHTML);
 
 function get_data() {
   var city_name = 'Mumbai';
