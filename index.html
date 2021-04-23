@@ -59,7 +59,7 @@
             <!-- location search starts here -->
             <form action="#FIXME" class="searchForm" method="GET">
               <div class="search">
-                <input type="text" name="search" class="search-location" placeholder="Find your location...">
+                <input type="text" name="search" id="city-in" class="search-location" placeholder="Find your location...">
                 <button class="findBtn">Find</button>
               </div>
             </form>
@@ -67,13 +67,13 @@
             <!-- weather forecast starts here -->
             <div class="current-weather">
               <ul class="weather-date">
-                <li class="current-day">Monday</li>
-                <li class="current-date">6 Oct</li>
+                <li id="current-day">Monday</li>
+                <li id="current-date">6 Oct</li>
               </ul>
               <span class="city-name">New York</span>
               <ul class="weather-temp">
-                <li class="temp">23 C</li>
-                <li class="weather-img"><img src="./assets/images/icons/icon-1.svg" alt="weather-image"></li>
+                <li class="temp" id="tem">23 C</li>
+                <li id="weather-img"><img src="./assets/images/icons/icon-1.svg" id="weather-icon-img" alt="weather-image"></li>
               </ul>
               <ul class="weather-type">
                 <li class="humidity-icon" id="humidity">20%</li>
