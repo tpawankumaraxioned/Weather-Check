@@ -283,8 +283,7 @@ h1 { display: flex; }
 
 .current-weather {
   box-sizing: border-box;
-  width: 40%;
-  /* padding: 30px; */
+  width: 39.5%;
   border-radius: 15px;
   position: absolute;
   bottom: 0;
@@ -297,7 +296,7 @@ h1 { display: flex; }
 
 .weather-date {
   display: flex;
-  padding: 10px;
+  padding: 10px 15px;
   background: #2D303D;
   font-size: 14px;
   justify-content: space-between;
@@ -318,7 +317,7 @@ h1 { display: flex; }
 }
 
 .weather-temp .temp {
-  font-size: 84px;
+  font-size: 86px;
   color: #fff;
   font-weight: 600;
 }
@@ -332,7 +331,7 @@ h1 { display: flex; }
 
 .weather-type {
   display: flex;
-  margin: 15px 20px 25px 25px;
+  margin: 20px 20px 35px 25px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -340,7 +339,7 @@ h1 { display: flex; }
 .weather-type li {
   margin: 0 18px 0 26px;
   position: relative;
-  color: #87888E;
+  color: #8C8D92;
   font-size: 15px;
 }
 
