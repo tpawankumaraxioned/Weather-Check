@@ -172,6 +172,7 @@ sub { bottom: -.25em; }
 ul { list-style: none; }   
 header { background: #1E202B; }
 a { text-decoration: none;}
+.head-menu { height: 350px; }
 
 header .wrapper {
   padding: 3.6%;
