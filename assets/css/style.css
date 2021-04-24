@@ -625,6 +625,7 @@ footer {
 .emailForm .error {
   display: none;
   color: #E60708;
+  font-size: 14px;
 }
 
 .footer-social-icon {
