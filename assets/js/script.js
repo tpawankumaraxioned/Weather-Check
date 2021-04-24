@@ -142,31 +142,37 @@ function displayData(data) {
 }
 //Weather api function ends here
 // Modal Starts here
-var playBtn = document.querySelectorAll('.playvideobtn');
+var playBtn = document.querySelector('.playvideobtn');
 var closeBtn = document.querySelector('.popup-close');
-var a =document.querySelector('.playvideobtn').getAttribute('data-video');
+// var a =document.querySelector('.playvideobtn').getAttribute('data-video');
   // console.log(a);
 
-playBtn.forEach(function(e) {
-  e.setAttribute('click','videoPath(data-video)');
+// playBtn.forEach(function(e) {
+//   e.setAttribute('click',videoPath(a));
   
-});
+// });
 
-function videoPath(path) {
-  console.log(path);
-}
-
-// playBtn.addEventListener('click',function(e) {
-//   e.preventDefault();
-//   console.log(playBtn);
+// function videoPath(path) {
+//   console.log(path);
 //   if (e.target.tagName == 'IMG') {
 //     var video = e.target.parentElement.getAttribute("data-video");
 //     document.getElementById('video-source').src=video;
 //     document.getElementById('popup-video').style.display= "block";
 //     console.log(video);
 //   }
-  // var aa=this.getAttribute("data-video");
-  // console.log(aa);
-// });
+// }
+
+playBtn.addEventListener('click',function(e) {
+  e.preventDefault();
+  console.log(playBtn);
+  if (e.target.tagName == 'IMG') {
+    var video = e.target.parentElement.getAttribute("data-video");
+    document.getElementById('video-source').src=video;
+    document.getElementById('popup-video').style.display= "block";
+    console.log(video);
+  }
+  var aa=this.getAttribute("data-video");
+  console.log(aa);
+});
 
 // Modal ends here
