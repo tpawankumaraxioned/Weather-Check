@@ -11,6 +11,45 @@ navBtn.forEach(function(e) {
 });
 
 // Navigation menu active ends here
+// Hamburger menu starts here
+var hamburger, memuList; 
+
+hamburger = document.getElementById('hamburger-icon');
+menuList = document.querySelector('nav .menu');
+
+hamburger.addEventListener('click', function(){
+  hamburger.classList.toggle('active');
+  menuList.classList.toggle('active');
+});
+
+// Hamburger menu ends here
+// Form Validation Starts here
+var subscribeBtn = document.getElementById('subscribe');
+
+subscribeBtn.addEventListener('click', function() {
+	var formSubmit = document.querySelector('.footer-top .wrapper form');
+	formSubmit.setAttribute('onsubmit', 'event.preventDefault(); validateForm();');
+});
+
+function validateForm() { 
+  var email, regEmail;
+  email = document.getElementById('emailid');
+  regEmail=  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+  if(email.value == "") 
+  {
+    document.querySelector('.emailError').style.display = "inline-block";
+  }
+	else if(!regEmail.test(email.value)) {
+    document.querySelector('.emailError').style.display = "inline-block";
+		document.querySelector('.emailError').innerHTML = "Enter proper email-id";
+	}
+	else {
+    document.querySelector('.emailError').style.display = "none";
+  }
+		
+}
+// Form Validation Ends here
 //Weather api function starts here
 var today, days, week_day, todays_date, months, current_month;
 today = new Date();
