@@ -16,8 +16,12 @@ var hamburger, memuList;
 
 hamburger = document.getElementById('hamburger-icon');
 menuList = document.querySelector('nav .menu');
+var headMenu = document.querySelector('header');
+// console.log(headMenu);
+// headMenu.classList.add('head-menu');
 
 hamburger.addEventListener('click', function(){
+  headMenu.classList.toggle('head-menu');
   hamburger.classList.toggle('active');
   menuList.classList.toggle('active');
 });
