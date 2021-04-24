@@ -580,7 +580,7 @@ footer {
 }
 
 .emailForm {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
   position: relative;
   flex-basis: 66%;
 }
@@ -608,7 +608,7 @@ footer {
   border-style: none;
   border-radius: 50px;
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 4px;
   background: #009AD8;
   color: #fff;
@@ -624,6 +624,9 @@ footer {
 
 .emailForm .error {
   display: none;
+  position: absolute;
+  bottom: -18px;
+  left: 11px;
   color: #E60708;
   font-size: 14px;
 }
