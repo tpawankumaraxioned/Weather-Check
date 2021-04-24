@@ -617,9 +617,18 @@ footer {
   outline: none;
 }
 
-.emailForm button:hover {
+ button:hover {
   background: #323544;
   color: #fff;
+}
+
+.emailForm .error {
+  display: none;
+  position: absolute;
+  bottom: -18px;
+  left: 11px;
+  color: #E60708;
+  font-size: 14px;
 }
 
 .footer-social-icon {
