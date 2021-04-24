@@ -1,3 +1,16 @@
+// Navigation menu active starts here
+var navBtn = document.querySelectorAll('.menu li a');
+
+navBtn.forEach(function(e) {
+  e.addEventListener('click', function(){
+    navBtn.forEach(function(ev){
+      ev.classList.remove('active');
+    });
+    this.classList.add('active');
+  });
+});
+
+// Navigation menu active ends here
 //Weather api function starts here
 var today, days, week_day, todays_date, months, current_month;
 today = new Date();
