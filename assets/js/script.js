@@ -85,19 +85,22 @@ function displayData(data) {
   }
 }
 //Weather api function ends here
+// Modal Starts here
+var playBtn = document.querySelectorAll('.playvideobtn')[0];
+console.log(playBtn);
+var closeBtn = document.querySelector('.popup-close');
 
+// playBtn.addEventListener('click',function(e) {
+//   e.preventDefault();
+//   console.log(playBtn);
+//   if (e.target.tagName == 'IMG') {
+//     var video = e.target.parentElement.getAttribute("data-video");
+//     document.getElementById('video-source').src=video;
+//     document.getElementById('popup-video').style.display= "block";
+//     console.log(video);
+//   }
+//   // var aa=this.getAttribute("data-video");
+//   // console.log(aa);
+// });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Modal ends here
