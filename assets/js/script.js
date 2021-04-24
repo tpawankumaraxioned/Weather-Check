@@ -86,9 +86,19 @@ function displayData(data) {
 }
 //Weather api function ends here
 // Modal Starts here
-var playBtn = document.querySelectorAll('.playvideobtn')[0];
-console.log(playBtn);
+var playBtn = document.querySelectorAll('.playvideobtn');
 var closeBtn = document.querySelector('.popup-close');
+var a =document.querySelector('.playvideobtn').getAttribute('data-video');
+  // console.log(a);
+
+playBtn.forEach(function(e) {
+  e.setAttribute('click','videoPath(data-video)');
+  
+});
+
+function videoPath(path) {
+  console.log(path);
+}
 
 // playBtn.addEventListener('click',function(e) {
 //   e.preventDefault();
@@ -99,8 +109,8 @@ var closeBtn = document.querySelector('.popup-close');
 //     document.getElementById('popup-video').style.display= "block";
 //     console.log(video);
 //   }
-//   // var aa=this.getAttribute("data-video");
-//   // console.log(aa);
+  // var aa=this.getAttribute("data-video");
+  // console.log(aa);
 // });
 
 // Modal ends here
