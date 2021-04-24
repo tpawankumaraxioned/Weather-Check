@@ -97,7 +97,7 @@
             <h2>Live cameras</h2>
             <ul>
               <li>
-                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-1@2x.jpg">
+                <a href="#FIXME" title="image" class="playvideobtn" data-video="assets/video/Video1.mp4">
                   <img src="./assets/images/live-camera-1.jpg" alt="live-camera-1-image">
                   <img src="./assets/images/play-button.png" alt="play-button">
                 </a>
@@ -105,7 +105,7 @@
                 <span class="lacal-date">8 oct, 8:00AM</span>
               </li>
               <li>
-                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-2@2x.jpg">
+                <a href="#FIXME" title="image" class="playvideobtn" data-video="assets/video/Video2.mp4">
                   <img src="./assets/images/live-camera-2.jpg" alt="live-camera-2-image">
                   <img src="./assets/images/play-button.png" alt="play-button">
                 </a>
@@ -113,7 +113,7 @@
                 <span class="lacal-date">8 oct, 8:00AM</span>
               </li>
               <li>
-                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-3@2x.jpg">
+                <a href="#FIXME" title="image" class="playvideobtn" data-video="assets/video/Video3.mp4">
                   <img src="./assets/images/live-camera-3.jpg" alt="live-camera-3-image">
                   <img src="./assets/images/play-button.png" alt="play-button">
                 </a>
@@ -121,7 +121,7 @@
                 <span class="lacal-date">8 oct, 8:00AM</span>
               </li>
               <li>
-                <a href="#FIXME" title="image" data-image="./assets/images/live-camera-4@2x.jpg">
+                <a href="#FIXME" title="image" class="playvideobtn" data-video="assets/video/Video4.mp4">
                   <img src="./assets/images/live-camera-4.jpg" alt="live-camera-4-image">
                   <img src="./assets/images/play-button.png" alt="play-button">
                 </a>
@@ -256,6 +256,16 @@
         <!-- footer-bottom ends here -->
       </footer>
       <!--footer ends here-->
+      <!-- Modal starts here -->
+      <div class="popup" id="popup-video">
+        <div class="video-container">
+          <span title="close" class="popup-close">&times;</span>
+          <video controls>
+            <source id="video-source" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Modal ends here -->
     </div>
     <!--container ends here-->
     <script src="assets/vendor/jquery-1.8.3.min.js"></script>
