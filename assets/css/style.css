@@ -315,8 +315,7 @@ h1 { display: flex; }
 }
 
 .weather-temp .temp {
-  font-size: 86px;
-  /* font-size: 7vw; */
+  font-size: 7vw;
   color: #fff;
   font-weight: 600;
 }
