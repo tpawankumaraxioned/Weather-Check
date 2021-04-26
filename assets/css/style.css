@@ -636,14 +636,11 @@ h1 {
 .awesome-pic ul li {
   -ms-flex-preferred-size: 31.5%;
   flex-basis: 31.5%; 
+  margin-bottom: 10px;
 }
 
 .awesome-pic ul li a { display: block; }
-
-.awesome-pic ul li img {
-  width: 100%;
-  margin-bottom: 10px;
-}
+.awesome-pic ul li img { width: 100%; }
 
 /* 4.5. Photos
    ========================================================================== */
@@ -807,12 +804,12 @@ footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 20px;
+  padding: 21px 20px;
   border-style: none;
   border-radius: 50px;
   background-color: #1E202B;
   color: #787b7e;
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
 }
 
@@ -825,7 +822,7 @@ footer {
 .emailForm button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 15px 20px;
+  padding: 16px 20px;
   border-style: none;
   border-radius: 50px;
   position: absolute;
@@ -1197,8 +1194,6 @@ video {
     flex-direction: column; 
   }
 
-  .awesome-pic ul li img { margin-bottom: 0; }
-
   .footer-top .wrapper { 
     -webkit-box-orient: vertical; 
     -webkit-box-direction: normal; 
@@ -1263,6 +1258,7 @@ video {
   .analyssis ul li { width: 100%; }
 
   .awesome-pic ul li { 
+    margin-bottom: 12px;
     -ms-flex-preferred-size: 31.5%; 
     flex-basis: 31.5%; 
   }
