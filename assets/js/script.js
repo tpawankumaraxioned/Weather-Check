@@ -1,4 +1,57 @@
-//Weather api function starts here
+// Navigation menu active starts here
+var navBtn = document.querySelectorAll('.menu li a');
+
+navBtn.forEach(function(e) {
+  e.addEventListener('click', function(){
+    navBtn.forEach(function(ev){
+      ev.classList.remove('active');
+    });
+    this.classList.add('active');
+  });
+});
+
+// Navigation menu active ends here
+// Hamburger menu starts here
+var hamburger, memuList, headMenu; 
+
+hamburger = document.getElementById('hamburger-icon');
+menuList = document.querySelector('nav .menu');
+headMenu = document.querySelector('header');
+
+hamburger.addEventListener('click', function(){
+  headMenu.classList.toggle('head-menu');
+  hamburger.classList.toggle('active');
+  menuList.classList.toggle('active');
+});
+
+// Hamburger menu ends here
+// Form Validation Starts here
+var subscribeBtn = document.getElementById('subscribe');
+
+subscribeBtn.addEventListener('click', function() {
+	var formSubmit = document.querySelector('.footer-top .wrapper form');
+	formSubmit.setAttribute('onsubmit', 'event.preventDefault(); validateForm();');
+});
+
+function validateForm() { 
+  var email, regEmail;
+  email = document.getElementById('emailid');
+  regEmail=  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  
+  if(email.value == "") 
+  {
+    document.querySelector('.emailError').style.display = "inline-block";
+  }
+	else if(!regEmail.test(email.value)) {
+    document.querySelector('.emailError').style.display = "inline-block";
+		document.querySelector('.emailError').innerHTML = "Enter proper email-id";
+	}
+	else {
+    document.querySelector('.emailError').style.display = "none";
+  }
+}
+// Form Validation Ends here
+// Weather api function starts here
 var today, days, week_day, todays_date, months, current_month;
 today = new Date();
 
@@ -56,7 +109,6 @@ findBtn.addEventListener('click', function(ev) {
 // OnClick search function ends here
 
 function displayData(data) {
-
   current_temp.innerHTML= data.main.temp+ '&deg;C';
   weather_humidity.innerHTML = data.main.humidity+ '%';
   wind_speed.innerHTML = data.wind.speed+'m/sec';
@@ -84,20 +136,25 @@ function displayData(data) {
     weather_icon.src = 'assets/images/icons/icon-1.svg';
   }
 }
-//Weather api function ends here
+// Weather api function ends here
+// Modal Starts here
+var closeBtn = document.querySelector('.popup-close');
+var playBtn = document.querySelectorAll(".playvideobtn");
 
+for (var i = 0; i < playBtn.length; i++) {
+  playBtn[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    var video = e.target.parentElement.getAttribute("data-video");
+    var video_tag = '<video controls autoplay><source id="video-source" src="'+video+'" type="video/mp4"></video>';
+    document.querySelector('.video-container').innerHTML = document.querySelector('.video-container').innerHTML + video_tag;
+    document.getElementById('popup-video').style.display= "block";
+  });
+}
 
+closeBtn.setAttribute('onclick', 'test()');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function test() {
+  document.getElementById('popup-video').style.display= "none";
+  document.querySelector('.video-container video').remove();
+}
+// Modal ends here
