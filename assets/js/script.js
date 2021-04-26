@@ -48,7 +48,12 @@ function validateForm() {
 	}
 	else {
     document.querySelector('.emailError').style.display = "none";
+    resetForm();
   }
+}
+
+function resetForm() {
+  document.getElementById('emailid').value= "";
 }
 // Form Validation Ends here
 // Weather api function starts here
