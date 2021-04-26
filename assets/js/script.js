@@ -10,6 +10,13 @@ navBtn.forEach(function(e) {
   });
 });
 
+var path = window.location.href; 
+if (path.includes('liveCam')) {
+  document.querySelector('.menu li a.active').classList.remove('active');
+  document.querySelector('.cam').classList.add('active')
+}
+
+
 // Navigation menu active ends here
 // Hamburger menu starts here
 var hamburger, memuList, headMenu; 
