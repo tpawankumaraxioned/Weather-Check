@@ -12,13 +12,11 @@ navBtn.forEach(function(e) {
 
 // Navigation menu active ends here
 // Hamburger menu starts here
-var hamburger, memuList; 
+var hamburger, memuList, headMenu; 
 
 hamburger = document.getElementById('hamburger-icon');
 menuList = document.querySelector('nav .menu');
-var headMenu = document.querySelector('header');
-// console.log(headMenu);
-// headMenu.classList.add('head-menu');
+headMenu = document.querySelector('header');
 
 hamburger.addEventListener('click', function(){
   headMenu.classList.toggle('head-menu');
@@ -51,10 +49,9 @@ function validateForm() {
 	else {
     document.querySelector('.emailError').style.display = "none";
   }
-		
 }
 // Form Validation Ends here
-//Weather api function starts here
+// Weather api function starts here
 var today, days, week_day, todays_date, months, current_month;
 today = new Date();
 
@@ -112,7 +109,6 @@ findBtn.addEventListener('click', function(ev) {
 // OnClick search function ends here
 
 function displayData(data) {
-
   current_temp.innerHTML= data.main.temp+ '&deg;C';
   weather_humidity.innerHTML = data.main.humidity+ '%';
   wind_speed.innerHTML = data.wind.speed+'m/sec';
@@ -140,39 +136,25 @@ function displayData(data) {
     weather_icon.src = 'assets/images/icons/icon-1.svg';
   }
 }
-//Weather api function ends here
+// Weather api function ends here
 // Modal Starts here
-var playBtn = document.querySelector('.playvideobtn');
 var closeBtn = document.querySelector('.popup-close');
-// var a =document.querySelector('.playvideobtn').getAttribute('data-video');
-  // console.log(a);
+var playBtn = document.querySelectorAll(".playvideobtn");
 
-// playBtn.forEach(function(e) {
-//   e.setAttribute('click',videoPath(a));
-  
-// });
-
-// function videoPath(path) {
-//   console.log(path);
-//   if (e.target.tagName == 'IMG') {
-//     var video = e.target.parentElement.getAttribute("data-video");
-//     document.getElementById('video-source').src=video;
-//     document.getElementById('popup-video').style.display= "block";
-//     console.log(video);
-//   }
-// }
-
-playBtn.addEventListener('click',function(e) {
-  e.preventDefault();
-  console.log(playBtn);
-  if (e.target.tagName == 'IMG') {
+for (var i = 0; i < playBtn.length; i++) {
+  playBtn[i].addEventListener('click', function(e) {
+    e.preventDefault();
     var video = e.target.parentElement.getAttribute("data-video");
-    document.getElementById('video-source').src=video;
+    var video_tag = '<video controls autoplay><source id="video-source" src="'+video+'" type="video/mp4"></video>';
+    document.querySelector('.video-container').innerHTML = document.querySelector('.video-container').innerHTML + video_tag;
     document.getElementById('popup-video').style.display= "block";
-    console.log(video);
-  }
-  var aa=this.getAttribute("data-video");
-  console.log(aa);
-});
+  });
+}
 
+closeBtn.setAttribute('onclick', 'test()');
+
+function test() {
+  document.getElementById('popup-video').style.display= "none";
+  document.querySelector('.video-container video').remove();
+}
 // Modal ends here
