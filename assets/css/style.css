@@ -704,6 +704,7 @@ footer {
   float: right;
 }
 
+.popup-close:hover { color: #0196D2; }
 
 .video-container {
   width: 600px;
