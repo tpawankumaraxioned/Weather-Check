@@ -248,14 +248,14 @@ h1 { display: flex; }
   border-style: none;
   border-radius: 50px;
   background-color: #1E202B;
-  color: #A4A6AE;
+  color: #717172;
   font-size: 14px;
   outline: none;
 }
 
 .search-location::placeholder {
-  color: #A4A6AE;
-  opacity: 1;
+  color: #717172;
+  /* opacity: 1; */
 }
 
 .findBtn {
@@ -303,6 +303,7 @@ h1 { display: flex; }
   display: block;
   margin: 40px 20px 20px 20px;
   text-align: left;
+  text-transform: capitalize;
   font-size: 17px;
 }
 
@@ -315,6 +316,7 @@ h1 { display: flex; }
 
 .weather-temp .temp {
   font-size: 86px;
+  /* font-size: 7vw; */
   color: #fff;
   font-weight: 600;
 }
@@ -540,10 +542,9 @@ div#errorMsg h2 {
   height: 7px;
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 16px;
   left: 0;
   content: '';
-  transform: translateY(-50%);
   background: url(../images/arrow.png) no-repeat;
 }
 
@@ -637,7 +638,7 @@ footer {
   display: flex; 
 }
 
-.footer-social-icon li { margin: 0 3px; }
+.footer-social-icon li { margin: 0 2px; }
 
 .footer-social-icon a span {
   text-indent: -99999999px;
@@ -649,12 +650,12 @@ footer {
 .footer-social-icon a::before {
   width: 20px;
   height: 20px;
-  padding: 8px;
+  padding: 11px;
   display: inline-block;
   color: #009AD8;
   border-radius: 50px;
   background: #1E202B;
-  font: normal normal normal 18px/1 FontAwesome;
+  font: normal normal normal 21px/1 FontAwesome;
   text-align: center;
 }
 
