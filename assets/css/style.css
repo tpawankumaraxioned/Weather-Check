@@ -21,6 +21,7 @@
     4.2. Live cameras
     4.3. List
     4.4. Features
+    4.5. Photos
   5. Footer 
     5.1. Footer-top
     5.2. Footer-bottom
@@ -178,7 +179,7 @@ header .wrapper {
   padding: 3.6%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 h1 { display: flex; }
@@ -255,7 +256,6 @@ h1 { display: flex; }
 
 .search-location::placeholder {
   color: #717172;
-  /* opacity: 1; */
 }
 
 .findBtn {
@@ -561,6 +561,113 @@ div#errorMsg h2 {
   margin-bottom: 10px;
 }
 
+/* 4.5. Photos
+   ========================================================================== */
+  
+.gallery {
+  background: #1E202B;
+}
+
+.breadcrumb {
+  background: #262936;
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px 30px;
+  border-radius: 50px;
+}
+
+.breadcrumb li {
+  margin-right: 38px;
+  position: relative;
+  color: #A4A6AE;
+  font-size: 13px;
+}
+
+.breadcrumb li:nth-child(2) { color: #CECFD1; }
+
+.breadcrumb li:nth-child(2)::before {
+  content: '';
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: -25px;
+  background: url('../images/arrow-gray.png');
+}
+
+.img-gallery {
+  padding: 6% 0 7% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img-gallery > li { 
+  flex-basis: 48.8%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.img-gallery article {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-gallery article figure,
+.img-gallery article .article-body {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.img-gallery article figure img { 
+  width: 100%; 
+  height: 100%;
+}
+
+.img-gallery .article-body {
+  background: #262936;
+  padding: 22px 20px;
+}
+
+.img-gallery .article-body h2 {
+  color: #CECFD1;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.img-gallery .article-body p {
+  color: #A4A6AE;
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 15px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.star-rating li a::after {
+  content: '\f005';
+  display: inline-block;
+  font: normal normal normal 17px/1 FontAwesome;
+  color: #1E202B;
+}
+
+.star-rating li:nth-child(1) a::after,
+.star-rating li:nth-child(2) a::after,
+.star-rating li:nth-child(3) a::after,
+.star-rating li:nth-child(4) a::after {
+  color: #009AD8;
+}
+
+.star-rating li span {
+  text-indent: -999999px;
+  display: inline-block;
+}
+
 /* ==========================================================================
    5. Footer 
    ========================================================================== */
@@ -729,6 +836,10 @@ video {
    7. Media Query
    ========================================================================== */
 
+@media only screen and (max-width: 1024px)  {
+  .menu li { margin-left: 15px; }
+}
+
 @media only screen and (max-width: 995px) { 
   .wrapper { width: 85%; }
   header .wrapper { position: relative; }
@@ -796,12 +907,17 @@ video {
     transition: all 0.2s ease-in-out;
   }
 
-  nav {
-    width: 100%;
-    position: absolute;
-    top: 86%;
-    left: 0;
-    z-index: 1;
+  header {
+    background: #1E202B;
+    height: 107px;
+    transition: all ease-in-out .4s;
+  }
+
+  header .wrapper {
+    padding: 34px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .menu {
@@ -809,6 +925,21 @@ video {
     display: flex;
     flex-direction: column;
     background: #262936;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .menu.active {
+    width: 100%;
+    position: absolute;
+    bottom: -215%;
+    left: 0;
+    opacity: 1;
+    transition: all 0.4s ease;
   }
 
   .menu li {
@@ -832,6 +963,14 @@ video {
   .search-location { padding: 15px 15px; }
   .findBtn { padding: 12px 40px; }
   .current-weather { width: 60%; }
+  .banner { padding: 5% 0 16% 0; }
+  .weather-date { padding: 8px 15px; }
+  .city-name { margin: 20px; }
+  .weather-temp { margin-left: 20px; }
+  .weather-temp .temp { font-size: 6vw; }
+  .weather-temp .weather-img { margin-top: 0; }
+  .weather-img img { width: 50%; }
+  .weather-type { margin: 15px 20px; }
 
   .live-cameras h2 {
     margin-bottom: 20px;
@@ -855,7 +994,7 @@ video {
 
   .list { padding: 5% 0; }
   .list ul { flex-direction: column; }
-  .list ul li { margin-bottom: 20px; }
+  .list ul li { margin-bottom: 0; }
   .list article { flex-basis: 85%; }
   .list article h3 { margin-bottom: 20px; }
 
@@ -870,7 +1009,7 @@ video {
 
   .analyssis ul li { 
     padding: 12px 0; 
-    width: 50%;
+    width: 60%;
   }
 
   .awesome-pic ul li {
@@ -878,6 +1017,7 @@ video {
     margin-bottom: 15px;
   }
 
+  .img-gallery { flex-direction: column; }
   .awesome-pic ul li img { margin-bottom: 0; }
   .footer-top .wrapper { flex-direction: column; }
   .emailForm { width: 100%; }
@@ -885,4 +1025,39 @@ video {
   .emailForm button { padding: 14px 18px; }
   .footer-social-icon { margin-right: 0%; }
   .footer-bottom { margin-top: -13px; }
+}
+
+@media only screen and (max-width: 767px) { 
+  .wrapper { width: 95%; }
+  .banner { padding: 5% 0 25% 0; }
+  .current-weather { width: 65%; }
+  .city-name { margin: 20px 15px; }
+
+  div#errorMsg h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  .live-cameras { padding: 25% 0 7% 0; }
+  
+  .weather-temp { margin-left: 15px; }
+  .weather-temp .temp { font-size: 7vw; }
+  .weather-temp .weather-img { margin-top: 5px; }
+  .weather-type li { margin: 0 15px 0 25px; }
+
+  .live-cameras ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .live-cameras ul li {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .list ul span { font-size: 24px; }
+  .list article { flex-basis: 80%; }
+  .features h4 { font-size: 30px; }
+  .analyssis ul li { width: 100%; }
+  .awesome-pic ul li { flex-basis: 31.5%; }
+  .video-container { width: 80%; }
 }
