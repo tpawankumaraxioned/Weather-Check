@@ -10,12 +10,11 @@ navBtn.forEach(function(e) {
   });
 });
 
-var path = window.location.href; 
-if (path.includes('liveCam')) {
+var page_path = window.location.href; 
+if (page_path.includes('liveCam')) {
   document.querySelector('.menu li a.active').classList.remove('active');
   document.querySelector('#cam').classList.add('active')
 }
-
 
 // Navigation menu active ends here
 // Hamburger menu starts here
@@ -64,61 +63,63 @@ function resetForm() {
 }
 // Form Validation Ends here
 // Weather api function starts here
-var today, days, week_day, todays_date, months, current_month;
-today = new Date();
+if (page_path.includes('index.html')) {
+  var today, days, week_day, todays_date, months, current_month;
+  today = new Date();
 
-days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-week_day = days[today.getDay()];
-todays_date = today.getDate();
-months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-cur_month = months[today.getMonth()];
+  days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  week_day = days[today.getDay()];
+  todays_date = today.getDate();
+  months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  cur_month = months[today.getMonth()];
 
-var city_name,city_location, current_temp, weather_icon, weather_humidity, wind_speed, wind_deg;
+  var city_name,city_location, current_temp, weather_icon, weather_humidity, wind_speed, wind_deg;
 
-document.getElementById('current-day').innerHTML = week_day;
-document.getElementById('current-date').innerHTML = todays_date+' '+cur_month;
-city_location = document.getElementById('city-loc');
-current_temp = document.getElementById('tem');
-weather_icon = document.getElementById('weather-icon-img');
-weather_humidity = document.getElementById('humidity');
-wind_speed =  document.getElementById('wind-speed');
-wind_deg =  document.getElementById('compass');
-city_name = 'Mumbai';
+  document.getElementById('current-day').innerHTML = week_day;
+  document.getElementById('current-date').innerHTML = todays_date+' '+cur_month;
+  city_location = document.getElementById('city-loc');
+  current_temp = document.getElementById('tem');
+  weather_icon = document.getElementById('weather-icon-img');
+  weather_humidity = document.getElementById('humidity');
+  wind_speed =  document.getElementById('wind-speed');
+  wind_deg =  document.getElementById('compass');
+  city_name = 'Mumbai';
 
-function get_data(city_name) {
-  var data_file = 'https://api.openweathermap.org/data/2.5/weather?q='+ city_name +'&units=metric&appid=fcdf0a2960c73aa346b28c532167c49c',
-  http_request = new XMLHttpRequest();
-  http_request.open("GET", data_file ,true);
-  http_request.send();
-  http_request.onreadystatechange = function() {
-    var data;
-    if (this.readyState == 4 ) {
-      if(this.status == 200) {
-        document.querySelector('.weather-data').style.display = "block";
-        document.querySelector('#errorMsg').style.display = "none";
-        data = JSON.parse(this.response);
-        city_location.innerHTML = city_name;
-        displayData(data);
-      }
-      else{
-        document.querySelector('.weather-data').style.display = "none";
-        document.querySelector('#errorMsg').style.display = "block";
+  function get_data(city_name) {
+    var data_file = 'https://api.openweathermap.org/data/2.5/weather?q='+ city_name +'&units=metric&appid=fcdf0a2960c73aa346b28c532167c49c',
+    http_request = new XMLHttpRequest();
+    http_request.open("GET", data_file ,true);
+    http_request.send();
+    http_request.onreadystatechange = function() {
+      var data;
+      if (this.readyState == 4 ) {
+        if(this.status == 200) {
+          document.querySelector('.weather-data').style.display = "block";
+          document.querySelector('#errorMsg').style.display = "none";
+          data = JSON.parse(this.response);
+          city_location.innerHTML = city_name;
+          displayData(data);
+        }
+        else{
+          document.querySelector('.weather-data').style.display = "none";
+          document.querySelector('#errorMsg').style.display = "block";
+        }
       }
     }
   }
+
+  get_data(city_name); 
+
+  // OnClick search function starts here
+  var findBtn = document.querySelector('.findBtn');
+
+  findBtn.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    var find_location = document.getElementById('city-in').value;
+    get_data(find_location);
+  });
+  // OnClick search function ends here
 }
-
-get_data(city_name); 
-
-// OnClick search function starts here
-var findBtn = document.querySelector('.findBtn');
-
-findBtn.addEventListener('click', function(ev) {
-  ev.preventDefault();
-  var find_location = document.getElementById('city-in').value;
-  get_data(find_location);
-});
-// OnClick search function ends here
 
 function displayData(data) {
   current_temp.innerHTML= data.main.temp+ '&deg;C';
