@@ -443,7 +443,6 @@ h1 {
   justify-content: space-between;
 }
 
-
 .live-cameras ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1234,8 +1233,8 @@ video {
     margin-bottom: 30px;
     font-size: 34px;
   }
+
   .live-cameras { padding: 25% 0 7% 0; }
-  
   .weather-temp { margin-left: 15px; }
   .weather-temp .temp { font-size: 7vw; }
   .weather-temp .weather-img { margin-top: 5px; }
@@ -1264,7 +1263,11 @@ video {
     flex-basis: 80%; 
   }
 
-  .features h4 { font-size: 30px; }
+  .features h4 { 
+    margin-bottom: 15px;
+    font-size: 30px; 
+  }
+
   .analyssis ul li { width: 100%; }
 
   .awesome-pic ul li { 
@@ -1273,6 +1276,7 @@ video {
     flex-basis: 31.5%; 
   }
 
+  .img-gallery > li { margin-bottom: 20px; }
   .video-container { width: 80%; }
   .emailForm { margin-bottom: 20px; }
 
