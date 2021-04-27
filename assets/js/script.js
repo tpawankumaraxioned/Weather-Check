@@ -11,11 +11,11 @@ navBtn.forEach(function(e) {
 });
 
 var page_path = window.location.href; 
+
 if (page_path.includes('liveCam')) {
   document.querySelector('.menu li a.active').classList.remove('active');
   document.querySelector('#cam').classList.add('active')
 }
-
 // Navigation menu active ends here
 // Hamburger menu starts here
 var hamburger, memuList, headMenu; 
@@ -38,7 +38,6 @@ hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('active');
   menuList.classList.toggle('active');
 });
-
 // Hamburger menu ends here
 // Form Validation Starts here
 var subscribeBtn = document.getElementById('subscribe');
@@ -70,7 +69,6 @@ function validateForm() {
 function resetForm() {
   document.getElementById('emailid').value= "";
 }
-
 // Form Validation Ends here
 // Weather api function starts here
 if (page_path.includes('index.html')) {
