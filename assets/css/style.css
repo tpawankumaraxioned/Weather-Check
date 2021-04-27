@@ -1229,7 +1229,7 @@ video {
   .current-weather { width: 65%; }
   .city-name { margin: 20px 15px; }
 
-  div#errorMsg h2 {
+  .current-weather errorMsg h2 {
     margin-bottom: 30px;
     font-size: 34px;
   }
