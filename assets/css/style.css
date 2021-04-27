@@ -221,7 +221,7 @@ h1 {
 }
 
 .menu li {
-  margin-left: 21px;
+  margin-left: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -229,13 +229,14 @@ h1 {
 
 .menu li a {
   padding: 6px 25px;
+  border-radius: 25px;
+  border: 2px solid #1E202B;
   color: #F4F4F5;
   font-size: 14px;
 }
 
 .menu li a.active,
 .menu li a:hover {
-  padding: 4px 23px;
   border: 2px solid #0196D2;
   border-radius: 25px;
   color: #0196D2;
@@ -952,7 +953,8 @@ video {
    ========================================================================== */
 
 @media only screen and (max-width: 1024px)  {
-  .menu li { margin-left: 15px; }
+  .menu li { margin-left: 13px; }
+  .menu li a { padding: 6px 20px; }
   .footer-social-icon { margin-right: 5%; }
 }
 
