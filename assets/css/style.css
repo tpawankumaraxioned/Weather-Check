@@ -957,12 +957,7 @@ video {
 
 @media only screen and (max-width: 1024px)  {
   .menu li { margin-left: 13px; }
-  
-  .menu li a { 
-    padding: 6px 20px; 
-    border-style: none;
-  }
-
+  .menu li a { padding: 6px 20px; }
   .footer-social-icon { margin-right: 5%; }
 }
 
@@ -1114,7 +1109,11 @@ video {
     border-radius: 0;
   }
 
-  .menu li a { padding: 0; }
+  .menu li a { 
+    padding: 0; 
+    border-style: none;
+  }
+
   .search-location { padding: 15px 15px; }
   .findBtn { padding: 11px 40px; }
   .current-weather { width: 60%; }
