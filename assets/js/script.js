@@ -24,6 +24,15 @@ hamburger = document.getElementById('hamburger-icon');
 menuList = document.querySelector('nav .menu');
 headMenu = document.querySelector('header');
 
+window.addEventListener("resize", function(){
+  var widthSize = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (widthSize >= 995){
+    headMenu.classList.remove('head-menu');
+    hamburger.classList.remove('active');
+    menuList.classList.remove('active');
+  }
+});
+
 hamburger.addEventListener('click', function(){
   headMenu.classList.toggle('head-menu');
   hamburger.classList.toggle('active');
