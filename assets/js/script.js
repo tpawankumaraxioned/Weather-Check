@@ -61,6 +61,7 @@ function validateForm() {
 function resetForm() {
   document.getElementById('emailid').value= "";
 }
+
 // Form Validation Ends here
 // Weather api function starts here
 if (page_path.includes('index.html')) {
@@ -122,6 +123,7 @@ if (page_path.includes('index.html')) {
 }
 
 function displayData(data) {
+  document.getElementById('city-in').value = '';
   current_temp.innerHTML= data.main.temp+ '&deg;C';
   weather_humidity.innerHTML = data.main.humidity+ '%';
   wind_speed.innerHTML = data.wind.speed+'m/sec';
